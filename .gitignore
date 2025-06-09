@@ -8,3 +8,5 @@
 /OptimizelyModules.CMS/.vs/OptiModule.CMS
 /OptimizelyModules.CMS/node_modules
 /OptimizelyModules.CMS/obj
+/OptimizelyModules.CMS/App_Data/OptiModule.CMS.mdf
+/OptimizelyModules.CMS/App_Data/OptiModule.CMS_log.ldf
