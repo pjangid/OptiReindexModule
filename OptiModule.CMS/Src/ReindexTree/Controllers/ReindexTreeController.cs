@@ -1,13 +1,11 @@
-﻿using EPiServer;
-using EPiServer.Cms.Shell.UI.Controllers.Internal;
-using EPiServer.Core;
+﻿using EPiServer.Cms.Shell.UI.Controllers.Internal;
 using EPiServer.Find;
 using EPiServer.ServiceLocation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OptiModule.ChronologicalFolder.ReindexTree.InputModels;
+using OptimizelyModules.CMS.ReindexTree.InputModels;
 
-namespace OptiModule.ChronologicalFolder.ReindexTree.Controllers
+namespace OptimizelyModules.CMS.ReindexTree.Controllers
 {
     [Route("api/indexing/reindex-tree")]
     public class ReindexTreeController : BaseController
@@ -38,20 +36,18 @@ namespace OptiModule.ChronologicalFolder.ReindexTree.Controllers
                 }
                 else
                 {
-                    var descendentItem = _contentLoader.Service.GetDescendents(contentReference)?
-                                .Select(x => _contentLoader.Service.Get<IContent>(x))?.ToList()
+                    var descendentItem = _contentLoader.Service
+                                .GetDescendents(contentReference)?
+                                .Select(x => _contentLoader.Service.Get<IContent>(x))
+                                .ToList()
                                 ?? new List<IContent>();
                     contentItems.AddRange(descendentItem);
                 }
 
                 await _client.Service.IndexAsync(contentItems);
             }
-
-            //return new JsonResult(
-            //    await _service.CreateAsync(inputModel),
-            //    SerializerSettings.JsonDefault);
-
-            return new JsonResult(new { message = "Reindexing tree is not implemented yet." });
+            
+            return new JsonResult(new { message = "Reindexing completed." });
         }
     }
 }
