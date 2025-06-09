@@ -1,0 +1,16 @@
+{
+  "name": "OptimizelyModules.CMS",
+  "version": "1.0.0",
+  "description": "This template should not be seen as best practices, but as a great way to learn and test Optimizely CMS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {}
+}
