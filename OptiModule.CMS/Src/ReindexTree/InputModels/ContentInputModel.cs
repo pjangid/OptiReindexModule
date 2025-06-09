@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace OptiModule.ChronologicalFolder.ReindexTree.InputModels
+namespace OptimizelyModules.CMS.ReindexTree.InputModels
 {
     [DataContract]
     public class ContentInputModel
