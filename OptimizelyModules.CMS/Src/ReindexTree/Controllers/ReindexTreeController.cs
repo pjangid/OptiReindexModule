@@ -36,12 +36,12 @@ namespace OptimizelyModules.CMS.ReindexTree.Controllers
                 }
                 else
                 {
-                    var descendentItem = _contentLoader.Service
+                    var descendantItem = _contentLoader.Service
                                 .GetDescendents(contentReference)?
                                 .Select(x => _contentLoader.Service.Get<IContent>(x))
                                 .ToList()
                                 ?? new List<IContent>();
-                    contentItems.AddRange(descendentItem);
+                    contentItems.AddRange(descendantItem);
                 }
 
                 await _client.Service.IndexAsync(contentItems);
