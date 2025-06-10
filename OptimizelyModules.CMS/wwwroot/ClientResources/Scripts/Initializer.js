@@ -3,8 +3,8 @@
     'dojo/_base/declare',
     'epi-cms/plugin-area/navigation-tree',
     'epi/_Module',
-    'alloy/ReIndexTree/ReIndexTree',
-    'alloy/ReIndexTree/ReIndexChildren'
+    'optimizelyModules/ReIndexTree/ReIndexTree',
+    'optimizelyModules/ReIndexTree/ReIndexChildren'
 ], function (
     dojo,
     declare,

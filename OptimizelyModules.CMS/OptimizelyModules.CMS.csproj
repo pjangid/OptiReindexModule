@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="EPiServer" />
+    <Using Include="EPiServer.Core" />
+    <Using Include="EPiServer.DataAbstraction" />
+    <Using Include="EPiServer.DataAnnotations" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="EPiServer.CMS" Version="12.29.0" />
+    <PackageReference Include="EPiServer.Find" Version="16.5.0" />
+    <PackageReference Include="EPiServer.Find.Cms" Version="16.5.0" />
+    <PackageReference Include="Wangkanai.Detection" Version="8.7.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Translations\**\*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Remove="module.config" />
+    <Content Remove="wwwroot\ClientResources\Scripts\ReIndexTree\ReIndexChildren.js" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="module.config" />
+    <None Include="wwwroot\ClientResources\Scripts\Initializer.js" />
+    <None Include="wwwroot\ClientResources\Scripts\ReIndexTree\ReIndexChildren.js" />
+    <None Include="wwwroot\ClientResources\Scripts\ReIndexTree\ReIndexTree.js" />
+    <None Include="wwwroot\ClientResources\Styles\Styles.css" />
+  </ItemGroup>
+</Project>
