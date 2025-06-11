@@ -26,3 +26,4 @@ This Optimizley module can be used to reindex a node and it's children only or t
 	</clientModule>
 </module>
 ```
+Here you can find more details on the [[blog post](https://world.optimizely.com/blogs/pjangid/dates/2020/6/adding-html-templates-in-rte-field-tinymce/)]
